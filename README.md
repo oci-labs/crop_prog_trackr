@@ -24,7 +24,7 @@ The vision here is to satisfy the **Data Visualization** requirement category of
     - [ ] Figure out how to authenticate with GCS and hide secrets
     - [ ] Does it match the [submission rules](https://googlemapsplatform.devpost.com/rules) for sharing and licensing?
  - [ ] Figure out how to interface data with Google Maps API
-    - [ ] Create Image Tiles to interface with Deck.gl [`TileLayer`](https://deck.gl/docs/api-reference/geo-layers/tile-layer) and [`TerrainLayer`](https://deck.gl/docs/api-reference/geo-layers/tile-layer) and [`TerrainLayer`](https://deck.gl/docs/api-reference/geo-layers/tile-layer) and [`TerrainLayer`](https://deck.gl/docs/api-reference/geo-layers/terrain-layer) objects.
+    - [ ] Create Image Tiles to interface with Deck.gl [`TileLayer`](https://deck.gl/docs/api-reference/geo-layers/tile-layer) and [`TerrainLayer`](https://deck.gl/docs/api-reference/geo-layers/tile-layer) objects.
     - [ ] Make specific image bands queryable or single-band images.
     - [ ] Connect Deck.gl `TileLayer` with `TerrainLayer` object
     - [ ] Produce final WGLOverlay integration - likely with Deck.GL `TerrainLayer` object (for data on map display)

@@ -25,7 +25,7 @@ body {
     width: 100%;
 }
 
-.title-page__title title, .title-page__title a {
+.title-page__title h1, .title-page__title a {
     display: flex;
 }
 

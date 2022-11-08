@@ -19,15 +19,12 @@
     let elevation: number;
 
     const mapOptions = {
-        // tilt: 0,
-        // heading: 0,
+        tilt: 0,
+        heading: 0,
         zoom: 5,
-        // mapId: 'f7933bd7d534252e', // vector
-        mapId: '6811f47ece808ee3', // raster
-        // center: { lat: 37.782551, lng: -122.445368 },
+        mapId: 'f7933bd7d534252e', // vector
         center: latlong,
         mapTypeId: 'terrain'
-        // for moving camera, these should be disabled
     };
 
     function initMap(): void {

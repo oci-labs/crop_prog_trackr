@@ -1,6 +1,5 @@
 <script>
-    import BasePage from '$lib/BasePage.svelte';
-    import '../css/base.css';
+    import TitlePage from '$lib/TitlePage.svelte';
 </script>
 
-<BasePage />
+<TitlePage />

@@ -1,5 +1,6 @@
 body {
     margin: unset;
+    font-family: 'Google Sans', 'Roboto', sans-serif !important;
 }
 
 .map-view__wrapper {
@@ -8,25 +9,65 @@ body {
     width: 100%;
 }
 
-.map { 
+.map {
     position: relative;
     left: 0px;
     width: 100%;
-    display: flex; 
+    display: flex;
     height: 100vh;
 }
 
 .right-display-pane__wrapper {
     display: flex;
     position: absolute;
-    background:rgb(219, 232, 255);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
     width: 15vw;
-    right: .6rem;
+    right: 0.6rem;
     top: 6rem;
-    padding: 1.5rem;
-    border-radius: 30px;
-    border: 1px solid rgb(128, 146, 177);
+    padding: 12px;
+    border-radius: 7px;
+    /* border: 1px solid rgb(128, 146, 177); */
     box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+}
+
+.timeline-control-bar__wrapper {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 2rem;
+    width: 100%;
+}
+
+.timeline-control-bar {
+    display: flex;
+    background: white;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 30%);
+    -webkit-box-shadow: 2px 2px 3px rgb(0 0 0 / 30%);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    width: 40%;
+    overflow-x: hidden;
+}
+
+.timeline-control-bar .option {
+    color: #80868B;
+    font-size: 14px;
+    line-height: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    flex-basis: 36px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.timeline-control-bar .option.selected {
+    border-radius: 16px;
+    background-color: #2979FF;
+    color: white;
+    font-weight: 500;
 }
 
 .button-section__wrapper {
@@ -49,9 +90,10 @@ button {
     border-radius: 16px;
     cursor: pointer;
     transition: all ease-in-out 0.5s;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-button:hover, button:active {
+button:hover,
+button:active {
     background-color: rgb(87, 127, 197);
 }

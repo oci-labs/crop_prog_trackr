@@ -4,8 +4,10 @@
     import { BitmapLayer } from '@deck.gl/layers';
     import { TileLayer, TerrainLayer } from '@deck.gl/geo-layers';
     import crosshairImg from './../assets/crosshair.png';
+    import TimelineControlBar from './TimelineControlBar.svelte';
 
-    let maps: string = 'Map';
+    let options = ['1/2022', '2/2022', '3/2022', '4/2022', '5/2022', '6/2022', '7/2022', '8/2022', '9/2022', '10/2022']
+    let selected: string;
 
     let container: HTMLElement;
     let map: google.maps.Map;
@@ -55,11 +57,8 @@
             ]
         });
         const elevator = new google.maps.ElevationService();
-        // const infowindow = new google.maps.InfoWindow({});
 
-        // infowindow.open(map);
-
-        // overlay.setMap(map);
+        overlay.setMap(map);
 
         var imgShape = {
             coords: [32, 32, 32, 32], // 1px
@@ -68,8 +67,10 @@
 
         var icon = {
             url: crosshairImg, // url
-            scaledSize: new google.maps.Size(50, 50), // size
+            scaledSize: new google.maps.Size(70, 70), // size
             anchor: new google.maps.Point(25, 25)
+            // scaledSize: new google.maps.Size(50, 50), // size
+            // anchor: new google.maps.Point(25, 25)
         };
 
         let crosshairMarker = new google.maps.Marker({
@@ -101,10 +102,6 @@
 
         google.maps.event.addListener(map, 'bounds_changed', centerReticle);
 
-        // google.maps.event.trigger(marker, 'click');
-
-        // Add a listener for the click event. Display the elevation for the LatLng of
-        // the click inside the infowindow.
         map.addListener('click', (event: any) => {
             console.log(event.latLng);
             console.log(elevator);
@@ -117,26 +114,14 @@
         location: google.maps.LatLng,
         elevator: google.maps.ElevationService
     ) {
-        console.log(location);
-        // Initiate the location request
         elevator
             .getElevationForLocations({
                 locations: [location]
             })
             .then(({ results }) => {
-                // infowindow.setPosition(location);
-
-                // Retrieve the first result
                 if (results[0]) {
-                    // Open the infowindow indicating the elevation at the clicked position.
-                    // infowindow.setContent(
-                    //     'The elevation at this point <br>is ' + results[0].elevation + ' meters.'
-                    // );
                     elevation = results[0].elevation;
-                    console.log(results[0].elevation);
-                } else {
-                    // infowindow.setContent('No results found');
-                }
+                } 
             })
             .catch((e) => console.log('Elevation service failed due to: ' + e));
     }
@@ -149,4 +134,5 @@
 <div class="map-view__wrapper">
     <div class="map" bind:this={container} />
     <div class="right-display-pane__wrapper">{elevation ? `Elevation: ${elevation}` : 'Click for elevation.'} <br />Lat/Long: {mapCenter ? mapCenter : ''}</div>
+    <TimelineControlBar bind:options bind:selected />  
 </div>

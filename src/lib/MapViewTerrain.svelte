@@ -6,7 +6,18 @@
     import crosshairImg from './../assets/crosshair.png';
     import TimelineControlBar from './TimelineControlBar.svelte';
 
-    let options = ['1/2022', '2/2022', '3/2022', '4/2022', '5/2022', '6/2022', '7/2022', '8/2022', '9/2022', '10/2022']
+    let options = [
+        '1/2022',
+        '2/2022',
+        '3/2022',
+        '4/2022',
+        '5/2022',
+        '6/2022',
+        '7/2022',
+        '8/2022',
+        '9/2022',
+        '10/2022'
+    ];
     let selected: string;
 
     let container: HTMLElement;
@@ -19,12 +30,13 @@
     let elevation: number;
 
     const mapOptions = {
-        tilt: 0,
-        heading: 0,
+        // tilt: 0,
+        // heading: 0,
         zoom: 5,
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,
-        mapTypeId: 'terrain'
+        mapTypeId: 'terrain',
+        disableDefaultUI: true,
     };
 
     function initMap(): void {
@@ -43,12 +55,13 @@
                         offset: 0
                     },
                     // Digital elevation model from https://www.usgs.gov/
+                    // elevationData: 'https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}',
                     elevationData:
-                        'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png',
-                    texture:
-                        'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png',
-                    // elevationData: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/terrain.png',
-                    // texture: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/terrain-mask.png',
+                        'https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}',
+                    texture: 'https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}',
+                    // elevationData: 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png',
+                    // texture:
+                    // 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png',
                     bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
                 })
             ]
@@ -118,7 +131,7 @@
             .then(({ results }) => {
                 if (results[0]) {
                     elevation = results[0].elevation;
-                } 
+                }
             })
             .catch((e) => console.log('Elevation service failed due to: ' + e));
     }
@@ -130,6 +143,13 @@
 
 <div class="map-view__wrapper">
     <div class="map" bind:this={container} />
-    <div class="right-display-pane__wrapper">{elevation ? `Elevation: ${elevation}` : 'Click for elevation.'} <br />Lat/Long: {mapCenter ? mapCenter : ''}</div>
-    <TimelineControlBar bind:options bind:selected />  
+    <div class="back-button">
+        <a href="/" alt="back" class="link-button">Back</a>
+    </div>
+    <div class="right-display-pane__wrapper">
+        {elevation ? `Elevation: ${elevation}` : 'Click for elevation.'} <br />Lat/Long: {mapCenter
+            ? mapCenter
+            : ''}
+    </div>
+    <TimelineControlBar bind:options bind:selected />
 </div>

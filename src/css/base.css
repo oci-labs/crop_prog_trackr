@@ -1,3 +1,7 @@
+body {
+    margin: unset;
+}
+
 .map-view__wrapper {
     display: flex;
     height: 100%;
@@ -9,7 +13,20 @@
     left: 0px;
     width: 100%;
     display: flex; 
-    height: 93vh;
+    height: 100vh;
+}
+
+.right-display-pane__wrapper {
+    display: flex;
+    position: absolute;
+    background:rgb(219, 232, 255);
+    width: 15vw;
+    right: .6rem;
+    top: 6rem;
+    padding: 1.5rem;
+    border-radius: 30px;
+    border: 1px solid rgb(128, 146, 177);
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
 }
 
 .button-section__wrapper {

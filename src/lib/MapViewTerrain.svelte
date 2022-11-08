@@ -10,12 +10,16 @@
     let container: HTMLElement;
     let map: google.maps.Map;
 
-    let latlong = { lat: 51.47, lng: 0.45 };
+    let latlong = { lat: 38.53, lng: -98.53 };
+
+    let mapCenter: any;
+
+    let elevation: number;
 
     const mapOptions = {
         // tilt: 0,
         // heading: 0,
-        zoom: 8,
+        zoom: 5,
         // mapId: 'f7933bd7d534252e', // vector
         mapId: '6811f47ece808ee3', // raster
         // center: { lat: 37.782551, lng: -122.445368 },
@@ -64,7 +68,8 @@
 
         var icon = {
             url: crosshairImg, // url
-            scaledSize: new google.maps.Size(50, 50) // size
+            scaledSize: new google.maps.Size(50, 50), // size
+            anchor: new google.maps.Point(25, 25)
         };
 
         let crosshairMarker = new google.maps.Marker({
@@ -85,6 +90,7 @@
                 console.log('Interval');
                 console.log(marker);
                 google.maps.event.trigger(marker, 'click');
+                mapCenter = map.getCenter();
             }, 1000);
         };
 
@@ -126,6 +132,7 @@
                     // infowindow.setContent(
                     //     'The elevation at this point <br>is ' + results[0].elevation + ' meters.'
                     // );
+                    elevation = results[0].elevation;
                     console.log(results[0].elevation);
                 } else {
                     // infowindow.setContent('No results found');
@@ -141,4 +148,5 @@
 
 <div class="map-view__wrapper">
     <div class="map" bind:this={container} />
+    <div class="right-display-pane__wrapper">{elevation ? `Elevation: ${elevation}` : 'Click for elevation.'} <br />Lat/Long: {mapCenter ? mapCenter : ''}</div>
 </div>

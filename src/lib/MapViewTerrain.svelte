@@ -3,26 +3,32 @@
     import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
     import { BitmapLayer } from '@deck.gl/layers';
     import { TileLayer, TerrainLayer } from '@deck.gl/geo-layers';
+    import crosshairImg from './../assets/crosshair.png';
 
     let maps: string = 'Map';
 
     let container: HTMLElement;
     let map: google.maps.Map;
 
+    let latlong = { lat: 51.47, lng: 0.45 };
+
     const mapOptions = {
         // tilt: 0,
         // heading: 0,
         zoom: 8,
         // mapId: 'f7933bd7d534252e', // vector
-        mapId: "6811f47ece808ee3", // raster
+        mapId: '6811f47ece808ee3', // raster
         // center: { lat: 37.782551, lng: -122.445368 },
-        center: { lat: 51.47, lng: 0.45 },
+        center: latlong,
         mapTypeId: 'terrain'
         // for moving camera, these should be disabled
     };
 
     function initMap(): void {
         map = new google.maps.Map(container, mapOptions);
+        function panTo(latLng: any, map: any) {
+            map.panTo(latLng);
+        }
 
         const overlay = new DeckOverlay({
             layers: [
@@ -51,12 +57,53 @@
 
         // overlay.setMap(map);
 
+        var imgShape = {
+            coords: [32, 32, 32, 32], // 1px
+            type: 'rect' // rectangle
+        };
+
+        var icon = {
+            url: crosshairImg, // url
+            scaledSize: new google.maps.Size(50, 50) // size
+        };
+
+        let crosshairMarker = new google.maps.Marker({
+            position: latlong,
+            map: map,
+            icon: icon,
+            shape: imgShape,
+            optimized: false,
+            zIndex: 5
+        });
+
+        let interval: NodeJS.Timeout;
+
+        const debouncer = (marker: any) => {
+            console.log('Debounce');
+            clearTimeout(interval);
+            interval = setTimeout(() => {
+                console.log('Interval');
+                console.log(marker);
+                google.maps.event.trigger(marker, 'click');
+            }, 1000);
+        };
+
+        function centerReticle() {
+            crosshairMarker.setPosition(map.getCenter());
+            debouncer(crosshairMarker);
+        }
+
+        google.maps.event.addListener(map, 'bounds_changed', centerReticle);
+
+        // google.maps.event.trigger(marker, 'click');
+
         // Add a listener for the click event. Display the elevation for the LatLng of
         // the click inside the infowindow.
         map.addListener('click', (event: any) => {
             console.log(event.latLng);
             console.log(elevator);
             displayLocationElevation(event.latLng, elevator);
+            panTo(event.latLng, map);
         });
     }
 

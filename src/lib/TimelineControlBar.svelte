@@ -1,5 +1,7 @@
 <script lang="ts">
-    export let options: Array<string> | [] = [];
+    import type { optionList } from './types';
+
+    export let options: optionList[] | [] = [];
     export let selected: string = 't';
 
     function handleClick(event: Event) {
@@ -15,12 +17,12 @@
             {#each options as opt}
                 <div
                     class="option"
-                    id={opt}
-                    class:selected={selected === opt}
+                    id={opt.title}
+                    class:selected={selected === opt.title}
                     on:click={handleClick}
                     on:keyup={handleClick}
                 >
-                    {opt}
+                    {opt.title}
                 </div>
             {/each}
         {/if}

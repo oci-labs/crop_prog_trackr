@@ -1,0 +1,52 @@
+[
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/partial_test/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/partial_test/{z}/{x}/{y}.png",
+        "title": "1/2022"
+    },
+    {
+        "elevationDataUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+        "textureUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+        "title": "2/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google_maps_hackathon/subfolder_test/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google_maps_hackathon/subfolder_test/{z}/{x}/{y}.png",
+        "title": "3/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "4/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "5/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "6/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "7/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "8/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "9/2022"
+    },
+    {
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/js_test1/{z}/{x}/{y}",
+        "title": "10/2022"
+    }
+]

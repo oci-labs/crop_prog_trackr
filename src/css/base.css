@@ -139,13 +139,14 @@ body {
 .timeline-control-bar .option {
     color: #80868b;
     font-size: 14px;
+    min-width: 60px;
     line-height: 14px;
     padding-right: 16px;
     padding-left: 16px;
-    flex-basis: 36px;
     padding-top: 10px;
     padding-bottom: 8px;
     cursor: pointer;
+    text-align: center;
 }
 
 .timeline-control-bar .option.selected {
@@ -153,6 +154,39 @@ body {
     background-color: #2979ff;
     color: white;
     font-weight: 500;
+}
+
+.control-section {
+    display: flex;
+    width: calc(100% - 48px);
+    overflow-x: scroll;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.control-section::-webkit-scrollbar {
+    display: none;
+}
+
+.button-wrapper {
+    width: 24px;
+    display: flex;
+}
+
+.button-wrapper button {
+    border: unset;
+    background-color: transparent;
+    box-shadow: unset;
+    color: #000;
+    padding: 0px;
+    justify-content: center;
+    opacity: .58;
+}
+
+.button-wrapper button:hover {
+    opacity: .9;
+    background-color: transparent;
 }
 
 .button-section__wrapper {

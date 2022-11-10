@@ -18,8 +18,8 @@
             new TerrainLayer({
                 elevationDecoder: {
                     rScaler: 1500,
-                    gScaler: 1,
-                    bScaler: 1,
+                    gScaler: 0,
+                    bScaler: 0,
                     offset: 0
                 },
                 elevationData: selectedObj?.elevationDataUrl,

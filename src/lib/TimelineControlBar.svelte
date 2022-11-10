@@ -9,10 +9,24 @@
         let val = (event.target as HTMLDivElement).id;
         selected = val;
     }
+
+    function toggleLeft() {
+        console.log("Toggle left");
+    }
+
+    function toggleRight() {
+        console.log("Toggle right");
+    }
 </script>
 
 <div class="timeline-control-bar__wrapper">
     <div class="timeline-control-bar">
+        <div class="button-wrapper">
+            <button on:click={toggleLeft} class="toggle-left"><span class="material-symbols-outlined">
+                chevron_left
+                </span></button>
+        </div>
+        <div class="control-section">
         {#if options.length > 0}
             {#each options as opt}
                 <div
@@ -26,5 +40,11 @@
                 </div>
             {/each}
         {/if}
+    </div>
+        <div class="button-wrapper">
+            <button on:click={toggleRight} class="toggle-right"><span class="material-symbols-outlined">
+                chevron_right
+                </span></button>
+        </div>
     </div>
 </div>

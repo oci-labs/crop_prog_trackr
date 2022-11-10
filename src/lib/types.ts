@@ -3,3 +3,10 @@ export type optionList = {
     textureUrl: string;
     title: string;
 };
+
+export type sliderMetrics = {
+    bar: number;
+    container: number;
+    left: number
+    getHidden: () => number;
+}

@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
     import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
     import { TerrainLayer } from '@deck.gl/geo-layers';
-    import { displayLocationElevation } from './mapFunctions';
     import type { optionList } from './types';
     import crosshairImg from './../assets/crosshair.png';
 
@@ -38,6 +37,22 @@
         mapTypeId: 'terrain',
         disableDefaultUI: true
     };
+
+    function displayLocationElevation(
+        location: google.maps.LatLng,
+        elevator: google.maps.ElevationService
+    ) {
+        elevator
+            .getElevationForLocations({
+                locations: [location]
+            })
+            .then(({ results }) => {
+                if (results[0]) {
+                    elevation = results[0].elevation;
+                }
+            })
+            .catch((e) => console.log('Elevation service failed due to: ' + e));
+    }
 
     function initMap(): void {
         map = new google.maps.Map(container, mapOptions);
@@ -93,10 +108,7 @@
         map.addListener('click', (event: any) => {
             console.log(event.latLng);
             console.log(elevator);
-            let newElevation = displayLocationElevation(event.latLng, elevator);
-            if (newElevation) {
-                elevation = newElevation;
-            }
+            displayLocationElevation(event.latLng, elevator);
             panTo(event.latLng, map);
         });
     }

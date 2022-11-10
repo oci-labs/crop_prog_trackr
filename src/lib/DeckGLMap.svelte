@@ -17,7 +17,7 @@
         layers: [
             new TerrainLayer({
                 elevationDecoder: {
-                    rScaler: 1,
+                    rScaler: 1500,
                     gScaler: 1,
                     bScaler: 1,
                     offset: 0
@@ -32,6 +32,7 @@
     let latlong = { lat: 38.53, lng: -98.53 };
 
     const mapOptions = {
+        tilt: 100,
         zoom: 5,
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,

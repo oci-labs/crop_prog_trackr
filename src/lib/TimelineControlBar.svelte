@@ -9,12 +9,6 @@
     let leftButtonDisabled: boolean = true;
     let rightButtonDisabled: boolean = false;
 
-    function handleClick(event: Event) {
-        event.preventDefault();
-        let val = (event.target as HTMLDivElement).id;
-        selected = val;
-    }
-
     let container: HTMLElement;
     let bar: HTMLElement;
 
@@ -40,10 +34,26 @@
         checkMetrics();
         var pos = metrics.left;
         if (direction === 'right') {
-            scrollOffset = -(Math.abs(pos) + Math.min(metrics.getHidden(), metrics.container));
+            scrollOffset = -(Math.abs(pos) + Math.min(metrics.getHidden(), metrics.container) - 50);
         } else {
             scrollOffset = Math.min(0, metrics.container + pos);
         }
+        bar.style.left = scrollOffset + 'px';
+        setTimeout(() => {
+            checkMetrics();
+        }, 400);
+    }
+
+    function handleClick(index: number, title: string) {
+        checkMetrics();
+        console.log(index);
+        selected = title;
+        let clickedButtonIndex = index + 1; // index of the button that was clicked
+        let currentSpotOnTimeline = clickedButtonIndex * 92; // calculate the current placement
+        let containerSize = metrics.container; // total size of viewport
+        let leftOffsetInView = (containerSize / 2);
+        let offsetLeftScrollNeeded = (leftOffsetInView - currentSpotOnTimeline + 46);
+        scrollOffset = offsetLeftScrollNeeded;
         bar.style.left = scrollOffset + 'px';
         setTimeout(() => {
             checkMetrics();
@@ -89,13 +99,13 @@
         <div class="control-section" bind:this={container}>
             <div class="bar" bind:this={bar}>
                 {#if options.length > 0}
-                    {#each options as opt}
+                    {#each options as opt, i}
                         <div
                             class="option"
                             id={opt.title}
                             class:selected={selected === opt.title}
-                            on:click={handleClick}
-                            on:keyup={handleClick}
+                            on:click={() => handleClick(i, opt.title)}
+                            on:keyup={() => handleClick(i, opt.title)} 
                         >
                             {opt.title}
                         </div>

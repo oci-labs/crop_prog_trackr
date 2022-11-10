@@ -3,6 +3,10 @@ body {
     font-family: 'Google Sans', 'Roboto', sans-serif !important;
 }
 
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
 .title-page__wrapper {
     display: flex;
     height: 100%;
@@ -199,6 +203,18 @@ body {
 .button-wrapper button:hover {
     opacity: 0.9;
     background-color: transparent;
+}
+
+.button-wrapper.leading {
+    width: 56px;
+}
+
+.button-wrapper .animation-button {
+    width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: relative;
 }
 
 .button-section__wrapper {

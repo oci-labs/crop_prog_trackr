@@ -8,6 +8,7 @@
     let scrollOffset: number = 0;
     let leftButtonDisabled: boolean = true;
     let rightButtonDisabled: boolean = false;
+    let animationOn: boolean = true;
 
     let container: HTMLElement;
     let bar: HTMLElement;
@@ -51,8 +52,8 @@
         let clickedButtonIndex = index + 1; // index of the button that was clicked
         let currentSpotOnTimeline = clickedButtonIndex * 92; // calculate the current placement
         let containerSize = metrics.container; // total size of viewport
-        let leftOffsetInView = (containerSize / 2);
-        let offsetLeftScrollNeeded = (leftOffsetInView - currentSpotOnTimeline + 46);
+        let leftOffsetInView = containerSize / 2;
+        let offsetLeftScrollNeeded = leftOffsetInView - currentSpotOnTimeline + 46;
         scrollOffset = offsetLeftScrollNeeded;
         bar.style.left = scrollOffset + 'px';
         setTimeout(() => {
@@ -84,6 +85,11 @@
         slideTimeline('right');
     }
 
+    function toggleAnimation(event: Event) {
+        event.preventDefault();
+        animationOn = !animationOn;
+    }
+
     onMount(() => {
         checkMetrics();
     });
@@ -91,6 +97,13 @@
 
 <div class="timeline-control-bar__wrapper">
     <div class="timeline-control-bar">
+        <div class="button-wrapper leading">
+            <button on:click={toggleAnimation} class="animation-button"
+                ><span class="material-symbols-outlined"
+                    >{animationOn ? 'pause' : 'play_arrow'}
+                </span></button
+            >
+        </div>
         <div class="button-wrapper">
             <button on:click={toggleLeft} class="toggle-left" disabled={leftButtonDisabled}
                 ><span class="material-symbols-outlined"> chevron_left </span></button
@@ -105,7 +118,7 @@
                             id={opt.title}
                             class:selected={selected === opt.title}
                             on:click={() => handleClick(i, opt.title)}
-                            on:keyup={() => handleClick(i, opt.title)} 
+                            on:keyup={() => handleClick(i, opt.title)}
                         >
                             {opt.title}
                         </div>

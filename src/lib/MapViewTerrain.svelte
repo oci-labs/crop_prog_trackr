@@ -21,9 +21,7 @@
 </script>
 
 <div class="map-view__wrapper">
-    {#key selected}
-        <DeckGlMap bind:elevation bind:selectedObj bind:mapCenter />
-    {/key}
+    <DeckGlMap bind:elevation bind:selected bind:selectedObj bind:mapCenter />
     <div class="back-button">
         <a href="/" alt="back" class="link-button">Back</a>
     </div>

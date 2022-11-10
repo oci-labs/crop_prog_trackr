@@ -1,15 +1,33 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { changeOverlay, displayLocationElevation } from './mapFunctions';
+    import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
+    import { TerrainLayer } from '@deck.gl/geo-layers';
+    import { displayLocationElevation } from './mapFunctions';
     import type { optionList } from './types';
     import crosshairImg from './../assets/crosshair.png';
 
     export let elevation: number;
     export let selectedObj: optionList;
     export let mapCenter: any;
+    export let selected: string;
 
     let container: HTMLElement;
     let map: google.maps.Map;
+    const overlay = new DeckOverlay({
+        layers: [
+            new TerrainLayer({
+                elevationDecoder: {
+                    rScaler: 1,
+                    gScaler: 1,
+                    bScaler: 1,
+                    offset: 0
+                },
+                elevationData: selectedObj?.elevationDataUrl,
+                texture: selectedObj?.textureUrl,
+                bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
+            })
+        ]
+    });
 
     let latlong = { lat: 38.53, lng: -98.53 };
 
@@ -30,14 +48,14 @@
             map.panTo(latLng);
         }
 
-        changeOverlay(map, selectedObj);
+        overlay.setMap(map);
 
-        var imgShape = {
+        let imgShape = {
             coords: [32, 32, 32, 32], // 1px
             type: 'rect' // rectangle
         };
 
-        var icon = {
+        let icon = {
             url: crosshairImg, // url
             scaledSize: new google.maps.Size(70, 70), // size
             anchor: new google.maps.Point(25, 25)
@@ -54,7 +72,7 @@
 
         let interval: NodeJS.Timeout;
 
-        const debouncer = (marker: any) => {
+        function debouncer(marker: any) {
             console.log('Debounce');
             clearTimeout(interval);
             interval = setTimeout(() => {
@@ -63,7 +81,7 @@
                 google.maps.event.trigger(marker, 'click');
                 mapCenter = map.getCenter();
             }, 1000);
-        };
+        }
 
         function centerReticle() {
             crosshairMarker.setPosition(map.getCenter());
@@ -83,10 +101,29 @@
         });
     }
 
+    function changeOverlay() {
+        overlay.setProps({
+            layers: [
+                new TerrainLayer({
+                    elevationDecoder: {
+                        rScaler: 1,
+                        gScaler: 1,
+                        bScaler: 1,
+                        offset: 0
+                    },
+                    elevationData: selectedObj?.elevationDataUrl,
+                    texture: selectedObj?.textureUrl,
+                    bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
+                })
+            ]
+        });
+    }
+
     onMount(() => {
         initMap();
     });
+
+    $: selected, changeOverlay();
 </script>
 
 <div class="map" bind:this={container} />
-

@@ -35,7 +35,8 @@
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,
         mapTypeId: 'terrain',
-        disableDefaultUI: true
+        mapTypeControl: false,
+        fullscreenControl: false
     };
 
     function displayLocationElevation(

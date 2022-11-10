@@ -12,6 +12,7 @@
 
     let container: HTMLElement;
     let map: google.maps.Map;
+
     const overlay = new DeckOverlay({
         layers: [
             new TerrainLayer({
@@ -50,6 +51,7 @@
             .then(({ results }) => {
                 if (results[0]) {
                     elevation = results[0].elevation;
+                    mapCenter = map.getCenter();
                 }
             })
             .catch((e) => console.log('Elevation service failed due to: ' + e));
@@ -88,28 +90,29 @@
 
         let interval: NodeJS.Timeout;
 
-        function debouncer(marker: any) {
-            console.log('Debounce');
+        function debouncer() {
             clearTimeout(interval);
             interval = setTimeout(() => {
-                console.log('Interval');
-                console.log(marker);
-                google.maps.event.trigger(marker, 'click');
-                mapCenter = map.getCenter();
-            }, 1000);
+                let newLat = map.getCenter()?.lat();
+                let newLong = map.getCenter()?.lng();
+
+                if (newLat && newLong) {
+                    let event = {
+                        latLng: new google.maps.LatLng(newLat, newLong)
+                    };
+                    displayLocationElevation(event.latLng, elevator);
+                }
+            }, 500);
         }
 
         function centerReticle() {
             crosshairMarker.setPosition(map.getCenter());
-            debouncer(crosshairMarker);
+            debouncer();
         }
 
         google.maps.event.addListener(map, 'bounds_changed', centerReticle);
 
         map.addListener('click', (event: any) => {
-            console.log(event.latLng);
-            console.log(elevator);
-            displayLocationElevation(event.latLng, elevator);
             panTo(event.latLng, map);
         });
     }

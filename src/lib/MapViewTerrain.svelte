@@ -26,9 +26,7 @@
         <a href="/" alt="back" class="link-button">Back</a>
     </div>
     <div class="right-display-pane__wrapper">
-        {elevation ? `Elevation: ${elevation}` : 'Click for elevation.'} <br />Lat/Long: {mapCenter
-            ? mapCenter
-            : ''}
+        Elevation: {elevation ? elevation : ''}<br />Lat/Long: {mapCenter ? mapCenter : ''}
     </div>
     <TimelineControlBar bind:options={optionList} bind:selected />
 </div>

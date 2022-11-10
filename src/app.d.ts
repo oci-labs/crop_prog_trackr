@@ -7,3 +7,6 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+declare module '@deck.gl/google-maps';
+declare module '@deck.gl/geo-layers';

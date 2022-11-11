@@ -28,7 +28,7 @@
         <a href="/" alt="back" class="link-button">Back</a>
     </div>
     <div class="right-display-pane__wrapper">
-        <span>Elevation: {elevation ? elevation.toFixed(0) : '0'} feet</span>
+        <span>Elevation: {elevation ? elevation.toFixed(0) : '0'} meters</span>
         <span>Lat/Long: {lat && long ? `(${lat.toFixed(2)}, ${long.toFixed(2)})` : '(0, 0)'}</span>
         <br />
         <div class="crop-gradient__wrapper">

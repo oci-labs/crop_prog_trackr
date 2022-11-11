@@ -100,7 +100,6 @@
 
     function toggleAnimation(event: Event) {
         event.preventDefault();
-        console.log(animationOn);
         if (!animationOn) {
             animationLength = 1000;
         }

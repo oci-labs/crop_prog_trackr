@@ -1,14 +1,20 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { onDestroy } from 'svelte';
     import type { optionList, sliderMetrics } from './types';
 
     export let options: optionList[] | [] = [];
     export let selected: string = 't';
+
     let metrics: sliderMetrics;
     let scrollOffset: number = 0;
+    let offsetLeft: string = '0px';
     let leftButtonDisabled: boolean = true;
     let rightButtonDisabled: boolean = false;
     let animationOn: boolean = true;
+    let animationLength: number = 1000;
+    let totalLength: number = options.length;
+    let intervalArr: any = [];
 
     let container: HTMLElement;
     let bar: HTMLElement;
@@ -35,27 +41,34 @@
         checkMetrics();
         var pos = metrics.left;
         if (direction === 'right') {
-            scrollOffset = -(Math.abs(pos) + Math.min(metrics.getHidden(), metrics.container) - 50);
+            scrollOffset = -(Math.abs(pos) + Math.min(metrics.getHidden(), metrics.container));
         } else {
             scrollOffset = Math.min(0, metrics.container + pos);
         }
-        bar.style.left = scrollOffset + 'px';
+        offsetLeft = scrollOffset + 'px';
         setTimeout(() => {
             checkMetrics();
         }, 400);
     }
 
     function handleClick(index: number, title: string) {
-        checkMetrics();
-        console.log(index);
         selected = title;
+        centerElement(index);
+    }
+
+    function centerElement(index: number) {
+        checkMetrics();
         let clickedButtonIndex = index + 1; // index of the button that was clicked
         let currentSpotOnTimeline = clickedButtonIndex * 92; // calculate the current placement
         let containerSize = metrics.container; // total size of viewport
         let leftOffsetInView = containerSize / 2;
         let offsetLeftScrollNeeded = leftOffsetInView - currentSpotOnTimeline + 46;
         scrollOffset = offsetLeftScrollNeeded;
-        bar.style.left = scrollOffset + 'px';
+        if (index === 0 || index === 1) {
+            offsetLeft = '0px';
+        } else {
+            offsetLeft = scrollOffset + 'px';
+        }
         setTimeout(() => {
             checkMetrics();
         }, 400);
@@ -87,12 +100,53 @@
 
     function toggleAnimation(event: Event) {
         event.preventDefault();
+        console.log(animationOn);
+        if (!animationOn) {
+            animationLength = 1000;
+        }
         animationOn = !animationOn;
+    }
+
+    function animateTimeline(opt: optionList, i: number) {
+        if (i + 1 === totalLength) {
+            selected = opt.title;
+            centerElement(0);
+            setTimeout(() => {
+                animationOn = false;
+            }, 100);
+        } else {
+            selected = opt.title;
+            centerElement(i);
+        }
+    }
+
+    function intervalInit() {
+        options.map((opt, i) => {
+            intervalArr.push(
+                setInterval(
+                    () => animateTimeline(opt, i),
+                    animationLength === 0 ? 1 : (i + 1) * animationLength
+                )
+            );
+        });
+    }
+
+    function stopAnimation() {
+        animationLength = 0;
+        intervalArr.map((a: any) => {
+            clearInterval(a);
+            intervalArr = [];
+        });
+        selected = options[0].title;
+        centerElement(0);
     }
 
     onMount(() => {
         checkMetrics();
     });
+
+    $: animationOn && intervalInit();
+    $: !animationOn && stopAnimation();
 </script>
 
 <div class="timeline-control-bar__wrapper">
@@ -110,7 +164,7 @@
             >
         </div>
         <div class="control-section" bind:this={container}>
-            <div class="bar" bind:this={bar}>
+            <div class="bar" bind:this={bar} style={`left: ${offsetLeft}`}>
                 {#if options.length > 0}
                     {#each options as opt, i}
                         <div

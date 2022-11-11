@@ -49,7 +49,8 @@
         },
         mapTypeId: 'satellite',
         mapTypeControl: false,
-        fullscreenControl: false
+        fullscreenControl: false,
+        heading: 12
     };
 
     function displayLocationElevation(

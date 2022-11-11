@@ -48,7 +48,7 @@
             latLngBounds: NORTH_AMERICA_BOUNDS,
             strictBounds: true
         },
-        mapTypeId: 'terrain',
+        mapTypeId: 'satellite',
         mapTypeControl: false,
         fullscreenControl: false
     };

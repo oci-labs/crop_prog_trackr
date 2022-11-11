@@ -1,5 +1,5 @@
 # Crop Progress Tracker
-Repo for OCI's submission into the 2022 Google Maps Platform Hackathon: [Repo](https://nodal-alcove-367916.uc.r.appspot.com/)
+Repository for OCI's submission into the 2022 Google Maps Platform Hackathon: [Deployed instance](https://nodal-alcove-367916.uc.r.appspot.com/)
 
 The vision here is to satisfy the **Data Visualization** requirement category of the Google Maps API Hackathon by creating a unique and domain-centered data visualization experience while satisfying all other submission requirements. The unique data visualization concept being displayed is a **4D crop progress imagery** (3 spatial dimensions and 1 temporal dimension) across the United States. **Users are able to interactively explore weekly, 3D crop progress data as it changes across the United States for a full year.**
 

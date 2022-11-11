@@ -64,7 +64,7 @@
         let leftOffsetInView = containerSize / 2;
         let offsetLeftScrollNeeded = leftOffsetInView - currentSpotOnTimeline + 46;
         scrollOffset = offsetLeftScrollNeeded;
-        if (index === 0 || index === 1) {
+        if (index < 3) {
             offsetLeft = '0px';
         } else {
             offsetLeft = scrollOffset + 'px';
@@ -154,7 +154,7 @@
         <div class="button-wrapper leading">
             <button on:click={toggleAnimation} class="animation-button"
                 ><span class="material-symbols-outlined"
-                    >{animationOn ? 'pause' : 'play_arrow'}
+                    >{animationOn ? 'stop' : 'play_arrow'}
                 </span></button
             >
         </div>

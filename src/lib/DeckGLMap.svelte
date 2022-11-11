@@ -32,11 +32,22 @@
 
     let latlong = { lat: 38.53, lng: -98.53 };
 
+    const NORTH_AMERICA_BOUNDS = {
+        north: 59.05,
+        south: 10,
+        west: -155,
+        east: -30
+    };
+
     const mapOptions = {
         tilt: 100,
         zoom: 5,
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,
+        restriction: {
+            latLngBounds: NORTH_AMERICA_BOUNDS,
+            strictBounds: true
+        },
         mapTypeId: 'terrain',
         mapTypeControl: false,
         fullscreenControl: false

@@ -154,7 +154,7 @@ body {
 
 .timeline-control-bar {
     display: flex;
-    background: white;
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: 2px 2px 3px rgb(0 0 0 / 30%);
     -webkit-box-shadow: 2px 2px 3px rgb(0 0 0 / 30%);
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -166,7 +166,7 @@ body {
 }
 
 .timeline-control-bar .option {
-    color: #80868b;
+    color: white;
     font-size: 14px;
     min-width: 60px;
     line-height: 14px;
@@ -180,8 +180,8 @@ body {
 
 .timeline-control-bar .option.selected {
     border-radius: 16px;
-    background-color: #2979ff;
-    color: white;
+    background-color: #a3c114;
+    color: black;
     font-weight: 500;
 }
 
@@ -219,7 +219,7 @@ body {
     border: unset;
     background-color: transparent;
     box-shadow: unset;
-    color: #000;
+    color: white;
     padding: 0px;
     justify-content: center;
     opacity: 0.58;
@@ -240,6 +240,7 @@ body {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     position: relative;
+    color: white;
 }
 
 .button-section__wrapper {

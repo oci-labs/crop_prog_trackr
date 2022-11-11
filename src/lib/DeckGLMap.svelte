@@ -39,7 +39,7 @@
     };
 
     const mapOptions = {
-        tilt: 20,
+        tilt: 40,
         zoom: 5,
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,
@@ -109,10 +109,10 @@
         });
 
         const buttons: [string, string, number, google.maps.ControlPosition][] = [
-            ['Tilt Up', 'tilt', -20, google.maps.ControlPosition.RIGHT_CENTER],
-            ['Rotate Left', 'rotate', 20, google.maps.ControlPosition.RIGHT_CENTER],
-            ['Rotate Right', 'rotate', -20, google.maps.ControlPosition.RIGHT_CENTER],
-            ['Tilt Down', 'tilt', 20, google.maps.ControlPosition.RIGHT_CENTER]
+            ['Tilt Up', 'tilt', -20, google.maps.ControlPosition.LEFT_CENTER],
+            ['Rotate Left', 'rotate', 20, google.maps.ControlPosition.LEFT_CENTER],
+            ['Rotate Right', 'rotate', -20, google.maps.ControlPosition.LEFT_CENTER],
+            ['Tilt Down', 'tilt', 20, google.maps.ControlPosition.LEFT_CENTER]
         ];
 
         buttons.forEach(([text, mode, amount, position]) => {

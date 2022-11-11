@@ -7,8 +7,9 @@
 
     export let elevation: number;
     export let selectedObj: optionList;
-    export let mapCenter: any;
     export let selected: string;
+    export let lat: number | undefined;
+    export let long: number | undefined;
 
     let container: HTMLElement;
     let map: google.maps.Map;
@@ -52,7 +53,8 @@
             .then(({ results }) => {
                 if (results[0]) {
                     elevation = results[0].elevation;
-                    mapCenter = map.getCenter();
+                    lat = map.getCenter()?.lat();
+                    long = map.getCenter()?.lng();
                 }
             })
             .catch((e) => console.log('Elevation service failed due to: ' + e));

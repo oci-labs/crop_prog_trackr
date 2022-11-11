@@ -113,12 +113,35 @@ body {
     color: white;
     font-size: 14px;
     width: 15vw;
+    min-width: 150px;
     right: 1rem;
     top: 1rem;
     padding: 12px;
     border-radius: 7px;
-    /* border: 1px solid rgb(128, 146, 177); */
     box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.crop-gradient__wrapper {
+    max-width: 15vw;
+    min-width: 150px;
+    width: auto;
+    display: flex;
+    clear: both;
+    position: relative;
+    flex-direction: column;
+}
+
+.crop-gradient {
+    width: 100%;
+}
+
+.crop-gradient__help-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .timeline-control-bar__wrapper {

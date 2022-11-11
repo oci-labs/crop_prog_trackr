@@ -18,10 +18,10 @@
         layers: [
             new TerrainLayer({
                 elevationDecoder: {
-                    rScaler: 1500,
-                    gScaler: 0,
-                    bScaler: 0,
-                    offset: 0
+                    rScaler: 500,
+                    gScaler: 100,
+                    bScaler: 400,
+                    offset: -200
                 },
                 elevationData: selectedObj?.elevationDataUrl,
                 texture: selectedObj?.textureUrl,
@@ -40,7 +40,7 @@
     };
 
     const mapOptions = {
-        tilt: 100,
+        tilt: 20,
         zoom: 5,
         mapId: 'f7933bd7d534252e', // vector
         center: latlong,
@@ -129,6 +129,47 @@
         map.addListener('click', (event: any) => {
             panTo(event.latLng, map);
         });
+
+        const buttons: [string, string, number, google.maps.ControlPosition][] = [
+            ['Tilt Up', 'tilt', -20, google.maps.ControlPosition.RIGHT_CENTER],
+            ['Rotate Left', 'rotate', 20, google.maps.ControlPosition.RIGHT_CENTER],
+            ['Rotate Right', 'rotate', -20, google.maps.ControlPosition.RIGHT_CENTER],
+            ['Tilt Down', 'tilt', 20, google.maps.ControlPosition.RIGHT_CENTER]
+        ];
+
+        buttons.forEach(([text, mode, amount, position]) => {
+            const controlDiv = document.createElement('div');
+            const controlUI = document.createElement('button');
+
+            if (text === 'Tilt Down') {
+                controlUI.classList.add('ui-button-bottom');
+            } else if (text === 'Tilt Up') {
+                controlUI.classList.add('ui-button-top');
+            } else if (text === 'Rotate Left') {
+                controlUI.classList.add('ui-button-left');
+            } else if (text === 'Rotate Right') {
+                controlUI.classList.add('ui-button-right');
+            }
+            controlUI.innerText = `${text}`;
+            controlUI.addEventListener('click', () => {
+                adjustMap(mode, amount);
+            });
+            controlDiv.appendChild(controlUI);
+            map.controls[position].push(controlDiv);
+        });
+
+        const adjustMap = function (mode: string, amount: number) {
+            switch (mode) {
+                case 'tilt':
+                    map.setTilt(map.getTilt()! + amount);
+                    break;
+                case 'rotate':
+                    map.setHeading(map.getHeading()! + amount);
+                    break;
+                default:
+                    break;
+            }
+        };
     }
 
     function changeOverlay() {
@@ -136,10 +177,10 @@
             layers: [
                 new TerrainLayer({
                     elevationDecoder: {
-                        rScaler: 1500,
-                        gScaler: 0,
-                        bScaler: 0,
-                        offset: 0
+                        rScaler: 500,
+                        gScaler: 100,
+                        bScaler: 400,
+                        offset: -200
                     },
                     elevationData: selectedObj?.elevationDataUrl,
                     texture: selectedObj?.textureUrl,

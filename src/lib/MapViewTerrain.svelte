@@ -4,6 +4,7 @@
     import list from './list.json';
     import DeckGlMap from './DeckGLMap.svelte';
     import cropGradient from './../assets/crop-gradient.png';
+    import crosshairImg from './../assets/crosshair.png';
 
     let optionList: optionList[] = list;
     let selected: string = optionList[0].title;
@@ -24,6 +25,9 @@
 
 <div class="map-view__wrapper">
     <DeckGlMap bind:elevation bind:selected bind:selectedObj bind:lat bind:long />
+    <div class="crosshair-image__wrapper">
+        <img src={crosshairImg} alt="Crosshair" />
+    </div>
     <div class="back-button">
         <a href="/" alt="back" class="link-button">Back</a>
     </div>

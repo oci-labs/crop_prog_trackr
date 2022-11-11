@@ -274,6 +274,17 @@ button:active {
     display: none !important;
 }
 
+.crosshair-image__wrapper {
+    position: absolute;
+    width: 50px;
+    top: calc(50vh - 15px);
+    left: calc(50vw - 15px);
+}
+
+.crosshair-image__wrapper img {
+    width: 100%;
+}
+
 .ui-button-top {
     position: absolute;
     margin-left: -11rem;

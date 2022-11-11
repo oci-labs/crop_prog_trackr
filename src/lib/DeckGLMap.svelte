@@ -3,7 +3,6 @@
     import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
     import { TerrainLayer } from '@deck.gl/geo-layers';
     import type { optionList } from './types';
-    import crosshairImg from './../assets/crosshair.png';
 
     export let elevation: number;
     export let selectedObj: optionList;
@@ -82,26 +81,6 @@
 
         overlay.setMap(map);
 
-        let imgShape = {
-            coords: [32, 32, 32, 32], // 1px
-            type: 'rect' // rectangle
-        };
-
-        let icon = {
-            url: crosshairImg, // url
-            scaledSize: new google.maps.Size(70, 70), // size
-            anchor: new google.maps.Point(25, 25)
-        };
-
-        let crosshairMarker = new google.maps.Marker({
-            position: latlong,
-            map: map,
-            icon: icon,
-            shape: imgShape,
-            optimized: false,
-            zIndex: 5
-        });
-
         let interval: NodeJS.Timeout;
 
         function debouncer() {
@@ -120,7 +99,6 @@
         }
 
         function centerReticle() {
-            crosshairMarker.setPosition(map.getCenter());
             debouncer();
         }
 

@@ -12,6 +12,7 @@
     let lat: number | undefined;
     let long: number | undefined;
     let showDescription: boolean = true;
+    let stateBoundaries: boolean = false;
     $: selected, setSelectedObject();
 
     function setSelectedObject() {
@@ -26,11 +27,16 @@
         showDescription = !showDescription;
     }
 
+    function toggleStateBoundaries(event: Event) {
+        event.preventDefault();
+        stateBoundaries = !stateBoundaries;
+    }
+
     let elevation: number;
 </script>
 
 <div class="map-view__wrapper">
-    <DeckGlMap bind:elevation bind:selected bind:selectedObj bind:lat bind:long />
+    <DeckGlMap bind:elevation bind:selected bind:selectedObj bind:lat bind:long bind:stateBoundaries />
     <div class="crosshair-image__wrapper">
         <img src={crosshairImg2} alt="Crosshair" />
     </div>
@@ -45,6 +51,9 @@
             <div class="crop-gradient__help-text">
                 <span>Planting</span><span>Harvest</span>
             </div>
+        </div>
+        <div class="toggle__wrapper">
+           <span><input type="checkbox" bind:checked={stateBoundaries} />Display state boundaries</span>
         </div>
         <div class="description__wrapper">
             <div class="description__heading">

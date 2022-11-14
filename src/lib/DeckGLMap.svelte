@@ -2,7 +2,9 @@
     import { onMount } from 'svelte';
     import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
     import { TerrainLayer } from '@deck.gl/geo-layers';
+    import { GeoJsonLayer } from '@deck.gl/layers';
     import type { optionList } from './types';
+    import usa from './usa.geo.json';
 
     export let elevation: number;
     export let selectedObj: optionList;
@@ -13,8 +15,25 @@
     let container: HTMLElement;
     let map: google.maps.Map;
 
+    const layer = new GeoJsonLayer({
+        id: 'GeoJsonLayer',
+        data: usa,
+        opacity: 1,
+        stroked: true,
+        filled: false,
+        extruded: true,
+        wireframe: true,
+        getElevation: (f: any) => 500000,
+        getLineColor: (f: any) => [0, 0, 0],
+        lineWidthScale: 200,
+        getLineWidth: 1,
+        lineWidthMinPixels: 2,
+        pickable: true
+    });
+
     const overlay = new DeckOverlay({
         layers: [
+            layer,
             new TerrainLayer({
                 elevationDecoder: {
                     rScaler: 1200,
@@ -154,6 +173,7 @@
     function changeOverlay() {
         overlay.setProps({
             layers: [
+                layer,
                 new TerrainLayer({
                     elevationDecoder: {
                         rScaler: 1200,

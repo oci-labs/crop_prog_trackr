@@ -17,10 +17,10 @@
         layers: [
             new TerrainLayer({
                 elevationDecoder: {
-                    rScaler: 500,
-                    gScaler: 100,
-                    bScaler: 400,
-                    offset: -200
+                    rScaler: 1200,
+                    gScaler: 800,
+                    bScaler: 900,
+                    offset: -1000
                 },
                 elevationData: selectedObj?.elevationDataUrl,
                 texture: selectedObj?.textureUrl,
@@ -156,10 +156,10 @@
             layers: [
                 new TerrainLayer({
                     elevationDecoder: {
-                        rScaler: 500,
-                        gScaler: 100,
-                        bScaler: 400,
-                        offset: -200
+                        rScaler: 1200,
+                        gScaler: 800,
+                        bScaler: 900,
+                        offset: -1000
                     },
                     elevationData: selectedObj?.elevationDataUrl,
                     texture: selectedObj?.textureUrl,

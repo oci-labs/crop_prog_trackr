@@ -1,6 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { onDestroy } from 'svelte';
     import type { optionList, sliderMetrics } from './types';
 
     export let options: optionList[] | [] = [];

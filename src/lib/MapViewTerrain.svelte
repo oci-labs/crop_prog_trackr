@@ -4,7 +4,6 @@
     import list from './list.json';
     import DeckGlMap from './DeckGLMap.svelte';
     import cropGradient from './../assets/crop-gradient.png';
-    import crosshairImg from './../assets/crosshair.png';
     import crosshairImg2 from './../assets/crosshair-2.png';
 
     let optionList: optionList[] = list;
@@ -61,6 +60,8 @@
             {#if showDescription}
                 <p>
                     This demo displays USDA's <a
+                        target="_blank"
+                        rel="noreferrer"
                         href="https://www.nass.usda.gov/Research_and_Science/Crop_Progress_Gridded_Layers/index.php"
                         >Crop Progress and Condition Layers</a
                     > dataset for corn crops from Mar 29th, 2021 through November 22nd, 2021. The Crop

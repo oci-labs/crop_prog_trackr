@@ -18,17 +18,18 @@
     const layer = new GeoJsonLayer({
         id: 'GeoJsonLayer',
         data: usa,
-        opacity: 1,
+
         stroked: true,
+        getStrokeColor: [0, 0, 0, 255],
+        lineWidthMinPixels: 1,
+        lineBillboard: false,
+
         filled: false,
-        extruded: true,
-        wireframe: true,
-        getElevation: (f: any) => 500000,
-        getLineColor: (f: any) => [0, 0, 0],
-        lineWidthScale: 200,
-        getLineWidth: 1,
-        lineWidthMinPixels: 2,
-        pickable: true
+        getFillColor: [0,0,0,0],
+        pickable: true,
+        getPolygonOffset: () => [0, -10000000] 
+        // getPolygonOffset: null
+
     });
 
     const overlay = new DeckOverlay({

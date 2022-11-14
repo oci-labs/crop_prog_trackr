@@ -204,7 +204,6 @@
     }
 
     function changeOverlay() {
-        console.log(stateBoundaries);
         if (stateBoundaries) {
             overlay.setProps({
                 layers: [

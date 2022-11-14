@@ -358,6 +358,23 @@ button:active {
     display: none !important;
 }
 
+.toggle__wrapper {
+    display: flex;
+    margin-top: 15px;
+}
+
+.toggle__wrapper span {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle__wrapper input {
+    margin-right: 10px;
+}
+
 .crosshair-image__wrapper {
     position: absolute;
     width: 50px;

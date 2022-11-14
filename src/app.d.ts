@@ -10,3 +10,4 @@ declare namespace App {
 
 declare module '@deck.gl/google-maps';
 declare module '@deck.gl/geo-layers';
+declare module '@deck.gl/layers';

@@ -2,19 +2,67 @@
     import { onMount } from 'svelte';
     import { GoogleMapsOverlay as DeckOverlay } from '@deck.gl/google-maps';
     import { TerrainLayer } from '@deck.gl/geo-layers';
+    import { GeoJsonLayer } from '@deck.gl/layers';
     import type { optionList } from './types';
+    import usa from './usa.geo.json';
 
     export let elevation: number;
     export let selectedObj: optionList;
     export let selected: string;
     export let lat: number | undefined;
     export let long: number | undefined;
+    export let stateBoundaries: boolean = false;
+
+    $: stateBoundaries = stateBoundaries;
 
     let container: HTMLElement;
     let map: google.maps.Map;
 
+    const layer = new GeoJsonLayer({
+        id: 'GeoJsonLayer',
+        data: usa,
+        stroked: true,
+        getStrokeColor: [0, 0, 0, 255],
+        lineWidthMinPixels: 0,
+        lineBillboard: false,
+        filled: false,
+        getFillColor: [0, 0, 0, 0],
+        pickable: true,
+        getPolygonOffset: () => [0, -10000000]
+    });
+
+    const layerWithBounds = new GeoJsonLayer({
+        id: 'GeoJsonLayer',
+        data: usa,
+        stroked: true,
+        getStrokeColor: [0, 0, 0, 255],
+        lineWidthMinPixels: 1,
+        lineBillboard: false,
+        filled: false,
+        getFillColor: [0, 0, 0, 0],
+        pickable: true,
+        getPolygonOffset: () => [0, -10000000]
+    });
+
     const overlay = new DeckOverlay({
         layers: [
+            layer,
+            new TerrainLayer({
+                elevationDecoder: {
+                    rScaler: 1200,
+                    gScaler: 800,
+                    bScaler: 900,
+                    offset: -1000
+                },
+                elevationData: selectedObj?.elevationDataUrl,
+                texture: selectedObj?.textureUrl,
+                bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
+            })
+        ]
+    });
+    const overlayWithStateBoundaries = new DeckOverlay({
+        layers: [
+            layerWithBounds,
             new TerrainLayer({
                 elevationDecoder: {
                     rScaler: 1200,
@@ -80,7 +128,11 @@
             map.panTo(latLng);
         }
 
-        overlay.setMap(map);
+        if (stateBoundaries) {
+            overlayWithStateBoundaries.setMap(map);
+        } else {
+            overlay.setMap(map);
+        }
 
         let interval: NodeJS.Timeout;
 
@@ -152,21 +204,41 @@
     }
 
     function changeOverlay() {
-        overlay.setProps({
-            layers: [
-                new TerrainLayer({
-                    elevationDecoder: {
-                        rScaler: 1200,
-                        gScaler: 800,
-                        bScaler: 900,
-                        offset: -1000
-                    },
-                    elevationData: selectedObj?.elevationDataUrl,
-                    texture: selectedObj?.textureUrl,
-                    bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
-                })
-            ]
-        });
+        if (stateBoundaries) {
+            overlay.setProps({
+                layers: [
+                    layerWithBounds,
+                    new TerrainLayer({
+                        elevationDecoder: {
+                            rScaler: 1200,
+                            gScaler: 800,
+                            bScaler: 900,
+                            offset: -1000
+                        },
+                        elevationData: selectedObj?.elevationDataUrl,
+                        texture: selectedObj?.textureUrl,
+                        bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
+                    })
+                ]
+            });
+        } else {
+            overlay.setProps({
+                layers: [
+                    layer,
+                    new TerrainLayer({
+                        elevationDecoder: {
+                            rScaler: 1200,
+                            gScaler: 800,
+                            bScaler: 900,
+                            offset: -1000
+                        },
+                        elevationData: selectedObj?.elevationDataUrl,
+                        texture: selectedObj?.textureUrl,
+                        bounds: [-122.5233, 37.6493, -122.3566, 37.8159]
+                    })
+                ]
+            });
+        }
     }
 
     onMount(() => {
@@ -174,6 +246,7 @@
     });
 
     $: selected, changeOverlay();
+    $: stateBoundaries, changeOverlay();
 </script>
 
 <div class="map" bind:this={container} />

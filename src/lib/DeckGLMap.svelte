@@ -89,7 +89,7 @@
     const mapOptions = {
         tilt: 40,
         zoom: 5,
-        mapId: 'f7933bd7d534252e', // vector
+        mapId: '5d5511ce693a7ae0', // vector
         center: latlong,
         restriction: {
             latLngBounds: NORTH_AMERICA_BOUNDS,

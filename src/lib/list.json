@@ -1,177 +1,177 @@
 [
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w13/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w13/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w13_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w13_hires_texture/{z}/{x}/{y}.png",
         "title": "MAR 29"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w14/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w14/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w14_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w14_hires_texture/{z}/{x}/{y}.png",
         "title": "APR 5"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w15/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w15/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w15_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w15_hires_texture/{z}/{x}/{y}.png",
         "title": "APR 12"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w16/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w16/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w16_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w16_hires_texture/{z}/{x}/{y}.png",
         "title": "APR 19"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w17/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w17/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w17_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w17_hires_texture/{z}/{x}/{y}.png",
         "title": "APR 26"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w18/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w18/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w18_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w18_hires_texture/{z}/{x}/{y}.png",
         "title": "MAY 3"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w19/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w19/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w19_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w19_hires_texture/{z}/{x}/{y}.png",
         "title": "MAY 10"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w20/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w20/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w20_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w20_hires_texture/{z}/{x}/{y}.png",
         "title": "MAY 17"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w21/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w21/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w21_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w21_hires_texture/{z}/{x}/{y}.png",
         "title": "MAY 24"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w22/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w22/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w22_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w22_hires_texture/{z}/{x}/{y}.png",
         "title": "MAY 31"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w23/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w23/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w23_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w23_hires_texture/{z}/{x}/{y}.png",
         "title": "JUN 7"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w24/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w24/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w24_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w24_hires_texture/{z}/{x}/{y}.png",
         "title": "JUN 14"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w25/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w25/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w25_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w25_hires_texture/{z}/{x}/{y}.png",
         "title": "JUN 21"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w26/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w26/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w26_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w26_hires_texture/{z}/{x}/{y}.png",
         "title": "JUN 28"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w27/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w27/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w27_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w27_hires_texture/{z}/{x}/{y}.png",
         "title": "JUL 5"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w28/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w28/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w28_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w28_hires_texture/{z}/{x}/{y}.png",
         "title": "JUL 12"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w29/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w29/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w29_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w29_hires_texture/{z}/{x}/{y}.png",
         "title": "JUL 19"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w30/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w30/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w30_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w30_hires_texture/{z}/{x}/{y}.png",
         "title": "JUL 26"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w31/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w31/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w31_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w31_hires_texture/{z}/{x}/{y}.png",
         "title": "AUG 2"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w32/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w32/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w32_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w32_hires_texture/{z}/{x}/{y}.png",
         "title": "AUG 09"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w33/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w33/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w33_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w33_hires_texture/{z}/{x}/{y}.png",
         "title": "AUG 16"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w34/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w34/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w34_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w34_hires_texture/{z}/{x}/{y}.png",
         "title": "AUG 23"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w35/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w35/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w35_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w35_hires_texture/{z}/{x}/{y}.png",
         "title": "AUG 30"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w36/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w36/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w36_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w36_hires_texture/{z}/{x}/{y}.png",
         "title": "SEP 6"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w37/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w37/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w37_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w37_hires_texture/{z}/{x}/{y}.png",
         "title": "SEP 13"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w38/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w38/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w38_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w38_hires_texture/{z}/{x}/{y}.png",
         "title": "SEP 20"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w39/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w39/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w39_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w39_hires_texture/{z}/{x}/{y}.png",
         "title": "SEP 27"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w40/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w40/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w40_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w40_hires_texture/{z}/{x}/{y}.png",
         "title": "OCT 4"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w41/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w41/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w41_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w41_hires_texture/{z}/{x}/{y}.png",
         "title": "OCT 11"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w42/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w42/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w42_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w42_hires_texture/{z}/{x}/{y}.png",
         "title": "OCT 18"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w43/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w43/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w43_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w43_hires_texture/{z}/{x}/{y}.png",
         "title": "OCT 25"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w44/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w44/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w44_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w44_hires_texture/{z}/{x}/{y}.png",
         "title": "NOV 1"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w45/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w45/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w45_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w45_hires_texture/{z}/{x}/{y}.png",
         "title": "NOV 8"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w46/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w46/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w46_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w46_hires_texture/{z}/{x}/{y}.png",
         "title": "NOV 15"
     },
     {
-        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w47/{z}/{x}/{y}.png",
-        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w47/{z}/{x}/{y}.png",
+        "elevationDataUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w47_hires_elevation_2/{z}/{x}/{y}.png",
+        "textureUrl": "https://storage.googleapis.com/alyce-ai-gee/google-maps-hackathon/cpc_21w47_hires_texture/{z}/{x}/{y}.png",
         "title": "NOV 22"
     }
 ]
